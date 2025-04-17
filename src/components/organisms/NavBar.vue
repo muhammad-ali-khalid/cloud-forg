@@ -4,7 +4,7 @@ import MenuButton from '../atoms/MenuButton.vue'
 import TheButton from '../atoms/TheButton.vue'
 import { ref } from 'vue'
 
-const navItems = ['IT SOLUTIONS', 'CYBERSECURITY SERVICES', 'ABOUT US']
+const navItems = ['IT SOLUTIONS', 'ABOUT US']
 
 const navLinks = [
   {
@@ -70,38 +70,6 @@ const navLinks = [
     ],
   },
   {
-    category: 'MANAGED CYBERSECURITY',
-    links: [
-      { name: 'Managed Cybersecurity', routeName: 'managed-cybersecurity/managed-cybersecurity' },
-      {
-        name: 'Cybersecurity Risk Assessment',
-        routeName: 'managed-cybersecurity/cybersecurity-risk-assessment',
-      },
-      { name: 'Virtual CISO', routeName: 'managed-cybersecurity/virtual-ciso' },
-      {
-        name: 'Multi-Factor Authentication',
-        routeName: 'managed-cybersecurity/multi-factor-authentication',
-      },
-      {
-        name: 'Endpoint Detection & Intrusion Response',
-        routeName: 'managed-cybersecurity/endpoint-detection-intrusion-response',
-      },
-      {
-        name: 'Cybersecurity Awareness',
-        routeName: 'managed-cybersecurity/cybersecurity-awareness',
-      },
-      {
-        name: 'Vulnerability Scanning & Penetration Testing',
-        routeName: 'managed-cybersecurity/vulnerability-scanning-penetration-testing',
-      },
-      {
-        name: 'Professional Dark Web Monitoring',
-        routeName: 'managed-cybersecurity/professional-dark-web-monitoring',
-      },
-      { name: 'Compliance & Security', routeName: 'managed-cybersecurity/compliance-security' },
-    ],
-  },
-  {
     category: 'PRICING',
     links: [
       { name: 'IT Service Plans', routeName: 'pricing/it-service-plans' },
@@ -131,11 +99,11 @@ function toggleCategory(category) {
 
 <template>
   <nav
-    class="fixed top-0 z-50 bg-white w-full flex justify-between items-center md:flex md:justify-start md:gap-[8vw] py-4 px-8"
+    class="fixed z-50 bg-white w-full flex justify-between items-center md:flex md:justify-start md:gap-[8vw] py-4 px-8"
   >
     <RouterLink :to="{ name: 'home' }"><TheLogo /></RouterLink>
     <button
-      class="hidden md:block text-sm text-blue-900 font-medium"
+      class="hidden md:block text-sm text-blue-900 font-medium hover:cursor-pointer hover:text-orange-600"
       v-for="item in navItems"
       :key="item"
     >
@@ -147,7 +115,7 @@ function toggleCategory(category) {
 
   <div
     v-if="toggle"
-    class="fixed inset-0 z-40 bg-transparent overflow-y-scroll"
+    class="fixed inset-0 top- 1 z-40 bg-transparent overflow-y-scroll"
     @click.self="toggle = false"
   >
     <div

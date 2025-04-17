@@ -16,11 +16,6 @@ const router = createRouter({
       component: TheTest,
       children: [
         {
-          path: 'managed-it-services',
-          name: 'managed-it-services/managed-it-services',
-          component: TheTest,
-        },
-        {
           path: 'co-managed-it-services',
           name: 'managed-it-services/co-managed-it-services',
           component: TheTest,
@@ -128,54 +123,6 @@ const router = createRouter({
         { path: 'microsoft-azure', name: 'cloud-solutions/microsoft-azure', component: TheTest },
         { path: 'google-workspace', name: 'cloud-solutions/google-workspace', component: TheTest },
         { path: 'amazon-aws', name: 'cloud-solutions/amazon-aws', component: TheTest },
-      ],
-    },
-    {
-      path: '/managed-cybersecurity',
-      name: 'managed-cybersecurity',
-      component: TheTest,
-      children: [
-        {
-          path: 'managed-cybersecurity',
-          name: 'managed-cybersecurity/managed-cybersecurity',
-          component: TheTest,
-        },
-        {
-          path: 'cybersecurity-risk-assessment',
-          name: 'managed-cybersecurity/cybersecurity-risk-assessment',
-          component: TheTest,
-        },
-        { path: 'virtual-ciso', name: 'managed-cybersecurity/virtual-ciso', component: TheTest },
-        {
-          path: 'multi-factor-authentication',
-          name: 'managed-cybersecurity/multi-factor-authentication',
-          component: TheTest,
-        },
-        {
-          path: 'endpoint-detection-intrusion-response',
-          name: 'managed-cybersecurity/endpoint-detection-intrusion-response',
-          component: TheTest,
-        },
-        {
-          path: 'cybersecurity-awareness',
-          name: 'managed-cybersecurity/cybersecurity-awareness',
-          component: TheTest,
-        },
-        {
-          path: 'vulnerability-scanning-penetration-testing',
-          name: 'managed-cybersecurity/vulnerability-scanning-penetration-testing',
-          component: TheTest,
-        },
-        {
-          path: 'professional-dark-web-monitoring',
-          name: 'managed-cybersecurity/professional-dark-web-monitoring',
-          component: TheTest,
-        },
-        {
-          path: 'compliance-security',
-          name: 'managed-cybersecurity/compliance-security',
-          component: TheTest,
-        },
       ],
     },
     {
