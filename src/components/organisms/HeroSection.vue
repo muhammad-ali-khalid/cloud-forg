@@ -1,6 +1,6 @@
 <template>
-  <div class="relative w-full h-screen overflow-hidden">
-    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+  <div class="relative w-full h-screen overflow-hidden mt-[72px]">
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full md:h-auto object-cover">
       <source src="/hero-vid.webm" type="video/mp4" />
       Your browser does not support the video tag.
     </video>

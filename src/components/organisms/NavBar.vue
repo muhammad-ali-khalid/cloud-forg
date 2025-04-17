@@ -10,7 +10,7 @@ const navLinks = [
   {
     category: 'MANAGED IT SERVICES',
     links: [
-      { name: 'Managed IT Services', routeName: 'managed-it-services/managed-it-services' },
+      { name: 'Managed IT Services', routeName: 'managed-it-services' },
       { name: 'Co-Managed IT Services', routeName: 'managed-it-services/co-managed-it-services' },
       { name: 'Remote IT Services', routeName: 'managed-it-services/remote-it-services' },
       { name: 'On-Site Support', routeName: 'managed-it-services/on-site-support' },
@@ -91,15 +91,12 @@ const navLinks = [
 const toggle = ref(false)
 
 const activeCategory = ref(null)
-
-function toggleCategory(category) {
-  activeCategory.value = activeCategory.value === category ? null : category
-}
 </script>
 
 <template>
   <nav
-    class="fixed z-50 bg-white w-full flex justify-between items-center md:flex md:justify-start md:gap-[8vw] py-4 px-8"
+    class="fixed top-0 z-50 bg-white w-full flex justify-between items-center md:justify-start md:gap-[8vw] py-4 px-8"
+    @mouseup="console.log(1)"
   >
     <RouterLink :to="{ name: 'home' }"><TheLogo /></RouterLink>
     <button
@@ -113,22 +110,14 @@ function toggleCategory(category) {
     <MenuButton class="md:hidden hover:cursor-pointer" @click="toggle = !toggle" />
   </nav>
 
-  <div
-    v-if="toggle"
-    class="fixed inset-0 top- 1 z-40 bg-transparent overflow-y-scroll"
-    @click.self="toggle = false"
-  >
-    <div
-      ref="menuPanel"
-      class="w-auto max-w-md bg-[#E3E3E3] rounded-2xl mx-2 mt-24 px-5 py-6"
-      @click.stop
-    >
+  <div v-if="toggle" class="fixed inset-0 top- 1 z-40 bg-transparent overflow-y-scroll">
+    <div class="w-auto max-w-md bg-[#E3E3E3] rounded-2xl mx-2 mt-24 px-5 py-6">
       <div
         class="text-md text-blue-900 font-bold"
         v-for="navLink in navLinks"
         :key="navLink.category"
       >
-        <button @click="toggleCategory(navLink.category)" class="flex gap-2">
+        <button @click="activeCategory = navLink.category" class="flex gap-2">
           {{ navLink.category }}
           <div v-if="activeCategory === navLink.category">⌄</div>
           <div v-else>></div>

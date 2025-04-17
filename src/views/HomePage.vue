@@ -4,6 +4,7 @@ import HeroSection from '@/components/organisms/HeroSection.vue'
 import TheFooter from '@/components/organisms/TheFooter.vue'
 import TheButton from '@/components/atoms/TheButton.vue'
 import TheHexagon from '@/components/molecules/TheHexagon.vue'
+import TheCard from '@/components/molecules/TheCard.vue'
 
 const services = [
   { name: 'Managed IT Services', routeName: 'managed-it-services' },
@@ -11,6 +12,39 @@ const services = [
   { name: 'Cloud Solutions', routeName: 'managed-it-services' },
   { name: 'Business Apps & Software Development', routeName: 'managed-it-services' },
   { name: 'Staff Augmentation', routeName: 'managed-it-services/it-staff-augmentation-services' },
+]
+
+const cards = [
+  {
+    heading: 'Legal',
+    detail:
+      'Robust IT solutions for construction: project management tools, data analytics, cloud services, cybersecurity.',
+  },
+  {
+    heading: 'Construction',
+    detail:
+      'Robust IT solutions for construction: project management tools, data analytics, cloud services, cybersecurity.',
+  },
+  {
+    heading: 'Real Estate',
+    detail:
+      'Robust IT solutions for construction: project management tools, data analytics, cloud services, cybersecurity.',
+  },
+  {
+    heading: 'Healthcare',
+    detail:
+      'Robust IT solutions for construction: project management tools, data analytics, cloud services, cybersecurity.',
+  },
+  {
+    heading: 'Non Profit',
+    detail:
+      'Robust IT solutions for construction: project management tools, data analytics, cloud services, cybersecurity.',
+  },
+  {
+    heading: 'Accounting & Finance',
+    detail:
+      'Robust IT solutions for construction: project management tools, data analytics, cloud services, cybersecurity.',
+  },
 ]
 </script>
 
@@ -24,6 +58,14 @@ const services = [
         <TheHexagon :service="service.name" :route-name="service.routeName" />
       </div>
     </div>
+  </div>
+  <div class="w-full bg-[#E3E3E3] flex flex-wrap justify-center gap-3">
+    <TheCard
+      v-for="card in cards"
+      :key="card.heading"
+      :heading="card.heading"
+      :detail="card.detail"
+    />
   </div>
   <div class="flex justify-center">
     <div class="w-5/6 flex flex-col items-center gap-3 pt-12">
