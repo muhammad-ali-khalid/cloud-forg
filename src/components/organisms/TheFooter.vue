@@ -1,27 +1,5 @@
-<script setup>
-import TheLogo from '../atoms/TheLogo.vue'
-import TheButton from '../atoms/TheButton.vue'
-
-const footerLinks = [
-  {
-    heading: 'SERVICES & CAPABILITIES',
-    links: [
-      'Managed IT Services',
-      'IT Consulting',
-      'Cloud Solutions',
-      'Managed Cybersecurity',
-      'Software Development',
-    ],
-  },
-  {
-    heading: 'COMPANY',
-    links: ['About Us', 'Client Support', 'Contact Us', 'Blog'],
-  },
-]
-</script>
-
 <template>
-  <footer class="w-full h-full mt-12">
+  <footer class="w-full h-full">
     <div class="w-full h-auto bg-[#E3E3E3] px-4 py-10">
       <div class="flex flex-col gap-4 md:flex-row md:justify-around">
         <div
@@ -46,3 +24,25 @@ const footerLinks = [
     </div>
   </footer>
 </template>
+
+<script setup>
+import TheLogo from '../atoms/TheLogo.vue'
+import TheButton from '../atoms/TheButton.vue'
+
+const footerLinks = [
+  {
+    heading: 'SERVICES & CAPABILITIES',
+    links: [
+      'Managed IT Services',
+      'IT Consulting',
+      'Cloud Solutions',
+      'Managed Cybersecurity',
+      'Software Development',
+    ],
+  },
+  {
+    heading: 'COMPANY',
+    links: ['About Us', 'Client Support', 'Contact Us', 'Blog'],
+  },
+]
+</script>

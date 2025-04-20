@@ -1,3 +1,48 @@
+<template>
+  <nav
+    class="fixed top-0 z-50 bg-white w-full h-auto flex justify-between items-center md:justify-start md:gap-[8vw] py-4 px-4 md:px-8"
+  >
+    <RouterLink :to="{ name: 'home' }"><TheLogo /></RouterLink>
+    <button
+      class="hidden md:block text-sm text-blue-900 font-medium hover:cursor-pointer hover:text-orange-600"
+      @click="toggle = !toggle"
+      v-for="item in navItems"
+      :key="item"
+    >
+      {{ item }}
+    </button>
+    <TheButton name="Let's Talk" class="hidden md:block" />
+    <MenuButton class="md:hidden hover:cursor-pointer" @click="toggle = !toggle" />
+  </nav>
+
+  <div v-if="toggle" class="fixed w-full h-auto top-[72px] z-50 overflow-y-scroll">
+    <div class="w-auto bg-[#E3E3E3] rounded-2xl mx-8 px-5 py-6">
+      <div
+        class="text-md text-blue-900 font-bold"
+        v-for="navLink in navLinks"
+        :key="navLink.category"
+      >
+        <button @click="activeCategory = navLink.category" class="flex gap-2">
+          {{ navLink.category }}
+          <div v-if="activeCategory === navLink.category">⌄</div>
+          <div v-else>></div>
+        </button>
+
+        <div v-if="activeCategory === navLink.category" class="py-2">
+          <div v-for="link in navLink.links" :key="link">
+            <RouterLink
+              :to="{ name: link.routeName }"
+              class="text-sm text-[#223756] font-medium hover:text-orange-600 hover:cursor-pointer"
+            >
+              {{ link.name }}
+            </RouterLink>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
 <script setup>
 import TheLogo from '../atoms/TheLogo.vue'
 import MenuButton from '../atoms/MenuButton.vue'
@@ -92,48 +137,3 @@ const toggle = ref(false)
 
 const activeCategory = ref(null)
 </script>
-
-<template>
-  <nav
-    class="fixed top-0 z-50 bg-white w-full flex justify-between items-center md:justify-start md:gap-[8vw] py-4 px-8"
-    @mouseup="console.log(1)"
-  >
-    <RouterLink :to="{ name: 'home' }"><TheLogo /></RouterLink>
-    <button
-      class="hidden md:block text-sm text-blue-900 font-medium hover:cursor-pointer hover:text-orange-600"
-      v-for="item in navItems"
-      :key="item"
-    >
-      {{ item }}
-    </button>
-    <TheButton name="Let's Talk" class="hidden md:block" />
-    <MenuButton class="md:hidden hover:cursor-pointer" @click="toggle = !toggle" />
-  </nav>
-
-  <div v-if="toggle" class="fixed inset-0 top- 1 z-40 bg-transparent overflow-y-scroll">
-    <div class="w-auto max-w-md bg-[#E3E3E3] rounded-2xl mx-2 mt-24 px-5 py-6">
-      <div
-        class="text-md text-blue-900 font-bold"
-        v-for="navLink in navLinks"
-        :key="navLink.category"
-      >
-        <button @click="activeCategory = navLink.category" class="flex gap-2">
-          {{ navLink.category }}
-          <div v-if="activeCategory === navLink.category">⌄</div>
-          <div v-else>></div>
-        </button>
-
-        <div v-if="activeCategory === navLink.category" class="py-2">
-          <div v-for="link in navLink.links" :key="link">
-            <RouterLink
-              :to="{ name: link.routeName }"
-              class="text-sm text-[#223756] font-medium hover:text-orange-600 hover:cursor-pointer"
-            >
-              {{ link.name }}
-            </RouterLink>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
