@@ -12,7 +12,7 @@ import TheFooter from '../organisms/TheFooter.vue'
   </slot>
   <div class="mt-[72px]">
     <slot name="hero">
-      <BaseHero />
+      <BaseHero name="Hello world!"/>
     </slot>
   </div>
   <slot name="main">

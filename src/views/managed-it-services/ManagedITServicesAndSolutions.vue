@@ -9,8 +9,8 @@ import BaseLayout from '@/components/templates/BaseLayout.vue'
       <!-- Hero section content -->
     </template>
     <template #main>
-      <div class="it-procurement-services">
-        <h1>IT Procurement Services</h1>
+      <div class="managed-it-services">
+        <h1>Managed IT Services & Solutions</h1>
         <!-- Add your content here -->
       </div>
     </template>
@@ -18,7 +18,7 @@ import BaseLayout from '@/components/templates/BaseLayout.vue'
 </template>
 
 <style scoped>
-.it-procurement-services {
+.managed-it-services {
   /* Add your styles here */
 }
 </style>
