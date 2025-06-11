@@ -10,7 +10,10 @@ const navLinks = [
   {
     category: 'MANAGED IT SERVICES',
     links: [
-      { name: 'Managed IT Services & Solutions', routeName: 'managed-it-services/managed-it-services-and-solutions' },
+      {
+        name: 'Managed IT Services & Solutions',
+        routeName: 'managed-it-services/managed-it-services-and-solutions',
+      },
       { name: 'Co-Managed IT Services', routeName: 'managed-it-services/co-managed-it-services' },
       { name: 'Remote IT Services', routeName: 'managed-it-services/remote-it-services' },
       { name: 'On-Site Support', routeName: 'managed-it-services/on-site-support' },
@@ -71,25 +74,14 @@ const navLinks = [
         routeName: 'cloud-solutions/microsoft-teams-and-teams-phone',
       },
       { name: 'Amazon Web Services (AWS)', routeName: 'cloud-solutions/amazon-web-services' },
-      { name: 'Microsoft OneDrive & SharePoint', routeName: 'cloud-solutions/microsoft-onedrive-and-sharepoint' },
-      { name: 'Google Workspace (Formally G Suite)', routeName: 'cloud-solutions/google-workspace' },
-    ],
-  },
-  {
-    category: 'PRICING',
-    links: [
-      { name: 'IT Service Plans', routeName: 'pricing/it-service-plans' },
-      { name: 'Cybersecurity Plans', routeName: 'pricing/cybersecurity-plans' },
-    ],
-  },
-  {
-    category: 'ABOUT US',
-    links: [
-      { name: 'Leadership', routeName: 'about-us/leadership' },
-      { name: 'Message from CEO', routeName: 'about-us/message-from-ceo' },
-      { name: 'Partners', routeName: 'about-us/partners' },
-      { name: 'Certifications', routeName: 'about-us/certifications' },
-      { name: 'Locations', routeName: 'about-us/locations' },
+      {
+        name: 'Microsoft OneDrive & SharePoint',
+        routeName: 'cloud-solutions/microsoft-onedrive-and-sharepoint',
+      },
+      {
+        name: 'Google Workspace (Formally G Suite)',
+        routeName: 'cloud-solutions/google-workspace',
+      },
     ],
   },
 ]

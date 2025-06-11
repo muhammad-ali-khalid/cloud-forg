@@ -1,20 +1,18 @@
 <script setup>
 import BaseLayout from '@/components/templates/BaseLayout.vue'
-// Add your imports and composition API code here
+import BaseHero from '@/components/organisms/BaseHero.vue'
+import BaseMain from '@/components/organisms/BaseMain.vue'
+
+const title = 'Managed Desktop as a Service'
 </script>
 
 <template>
   <BaseLayout>
     <template #hero>
-      <!-- Hero section content -->
+      <BaseHero :title="title"/>
     </template>
     <template #main>
-      <div class="managed-desktop-as-a-service">
-        <h1>Managed Desktop as a Service (DaaS)</h1>
-        <!-- Add your content here -->
-      </div>
+      <BaseMain/>
     </template>
   </BaseLayout>
 </template>
-
-

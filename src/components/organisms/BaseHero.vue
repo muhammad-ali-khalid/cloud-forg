@@ -1,13 +1,13 @@
 <script setup>
 const props = defineProps({
-  name: String,
+  title: String,
   description: String,
 })
 </script>
 
 <template>
   <div class="parent w-full h-[459px] flex flex-col items-center justify-center gap-10">
-    <div class="text-3xl text-[#5CAA46] font-black text-center">{{ props.name }}</div>
+    <div class="text-3xl text-[#5CAA46] font-black text-center">{{ props.title }}</div>
     <div class="text-md text-white px-4">
      {{ props.description }}
     </div>

@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '@/views/HomePage.vue'
-import BasePage from '@/views/BasePage.vue'
 
 // Managed IT Services Components
 import ManagedITServicesAndSolutions from '@/views/managed-it-services/ManagedITServicesAndSolutions.vue'
@@ -90,7 +89,7 @@ const router = createRouter({
     {
       path: '/it-consulting',
       name: 'it-consulting',
-      component: BasePage,
+      redirect: '/it-consulting/it-consulting-and-services',
       children: [
         {
           path: 'it-consulting-and-services',
@@ -127,7 +126,7 @@ const router = createRouter({
     {
       path: '/cloud-solutions',
       name: 'cloud-solutions',
-      component: BasePage,
+      redirect: '/cloud-solutions/managed-cloud-services',
       children: [
         {
           path: 'managed-cloud-services',
@@ -179,27 +178,6 @@ const router = createRouter({
           name: 'cloud-solutions/google-workspace',
           component: GoogleWorkspace,
         },
-      ],
-    },
-    {
-      path: '/pricing',
-      name: 'pricing',
-      component: BasePage,
-      children: [
-        { path: 'it-service-plans', name: 'pricing/it-service-plans', component: BasePage },
-        { path: 'cybersecurity-plans', name: 'pricing/cybersecurity-plans', component: BasePage },
-      ],
-    },
-    {
-      path: '/about-us',
-      name: 'about-us',
-      component: BasePage,
-      children: [
-        { path: 'leadership', name: 'about-us/leadership', component: BasePage },
-        { path: 'message-from-ceo', name: 'about-us/message-from-ceo', component: BasePage },
-        { path: 'partners', name: 'about-us/partners', component: BasePage },
-        { path: 'certifications', name: 'about-us/certifications', component: BasePage },
-        { path: 'locations', name: 'about-us/locations', component: BasePage },
       ],
     },
   ],
