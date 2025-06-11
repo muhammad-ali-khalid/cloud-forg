@@ -16,6 +16,11 @@ const router = createRouter({
       component: BasePage,
       children: [
         {
+          path: 'managed-it-services-and-solutions',
+          name: 'managed-it-services/managed-it-services-and-solutions',
+          component: BasePage,
+        },
+        {
           path: 'co-managed-it-services',
           name: 'managed-it-services/co-managed-it-services',
           component: BasePage,
@@ -36,19 +41,18 @@ const router = createRouter({
           component: BasePage,
         },
         {
-          path: 'backup-disaster-recovery',
-          name: 'managed-it-services/backup-disaster-recovery',
-          component: BasePage,
-        },
-        { path: 'it-procurement', name: 'managed-it-services/it-procurement', component: BasePage },
-        {
-          path: 'employee-onboarding-offboarding',
-          name: 'managed-it-services/employee-onboarding-offboarding',
+          path: 'backup-and-disaster-recovery',
+          name: 'managed-it-services/backup-and-disaster-recovery',
           component: BasePage,
         },
         {
-          path: 'it-staff-augmentation-services',
-          name: 'managed-it-services/it-staff-augmentation-services',
+          path: 'it-procurement-services',
+          name: 'managed-it-services/it-procurement-services',
+          component: BasePage,
+        },
+        {
+          path: 'employee-onboarding-and-offboarding',
+          name: 'managed-it-services/employee-onboarding-and-offboarding',
           component: BasePage,
         },
       ],
@@ -59,8 +63,13 @@ const router = createRouter({
       component: BasePage,
       children: [
         {
-          path: 'it-strategy-planning',
-          name: 'it-consulting/it-strategy-planning',
+          path: 'it-consulting-and-services',
+          name: 'it-consulting/it-consulting-and-services',
+          component: BasePage,
+        },
+        {
+          path: 'it-strategy-and-planning',
+          name: 'it-consulting/it-strategy-and-planning',
           component: BasePage,
         },
         {
@@ -69,18 +78,18 @@ const router = createRouter({
           component: BasePage,
         },
         {
-          path: 'mergers-acquisitions-consulting',
-          name: 'it-consulting/mergers-acquisitions-consulting',
+          path: 'mergers-and-acquisitions-consulting',
+          name: 'it-consulting/mergers-and-acquisitions-consulting',
           component: BasePage,
         },
         {
-          path: 'virtual-cio-cto-services',
-          name: 'it-consulting/virtual-cio-cto-services',
+          path: 'virtual-cio-and-cto-services',
+          name: 'it-consulting/virtual-cio-and-cto-services',
           component: BasePage,
         },
         {
-          path: 'risk-compliance-services',
-          name: 'it-consulting/risk-compliance-services',
+          path: 'risk-and-compliance-services',
+          name: 'it-consulting/risk-and-compliance-services',
           component: BasePage,
         },
       ],
@@ -96,33 +105,42 @@ const router = createRouter({
           component: BasePage,
         },
         {
-          path: 'managed-cloud-infrastructure',
-          name: 'cloud-solutions/managed-cloud-infrastructure',
+          path: 'managed-cloud-infrastructure-services',
+          name: 'cloud-solutions/managed-cloud-infrastructure-services',
           component: BasePage,
         },
         {
-          path: 'managed-cloud-security',
-          name: 'cloud-solutions/managed-cloud-security',
+          path: 'managed-desktop-as-a-service',
+          name: 'cloud-solutions/managed-desktop-as-a-service',
           component: BasePage,
         },
         {
-          path: 'data-center-housing-cloud-data-migration',
-          name: 'cloud-solutions/data-center-housing-cloud-data-migration',
+          path: 'data-center-housing-and-cloud-data-migration',
+          name: 'cloud-solutions/data-center-housing-and-cloud-data-migration',
           component: BasePage,
         },
         {
-          path: 'microsoft-365-services',
-          name: 'cloud-solutions/microsoft-365-services',
+          path: 'microsoft-365',
+          name: 'cloud-solutions/microsoft-365',
           component: BasePage,
         },
         {
-          path: 'microsoft-teams-teams-phone',
-          name: 'cloud-solutions/microsoft-teams-teams-phone',
+          path: 'microsoft-teams-and-teams-phone',
+          name: 'cloud-solutions/microsoft-teams-and-teams-phone',
+          component: BasePage,
+        },
+        {
+          path: 'amazon-web-services',
+          name: 'cloud-solutions/amazon-web-services',
+          component: BasePage,
+        },
+        {
+          path: 'microsoft-onedrive-and-sharepoint',
+          name: 'cloud-solutions/microsoft-onedrive-and-sharepoint',
           component: BasePage,
         },
         { path: 'microsoft-azure', name: 'cloud-solutions/microsoft-azure', component: BasePage },
         { path: 'google-workspace', name: 'cloud-solutions/google-workspace', component: BasePage },
-        { path: 'amazon-aws', name: 'cloud-solutions/amazon-aws', component: BasePage },
       ],
     },
     {

@@ -1,3 +1,104 @@
+<script setup>
+import TheLogo from '../atoms/TheLogo.vue'
+import MenuButton from '../atoms/MenuButton.vue'
+import TheButton from '../atoms/TheButton.vue'
+import { ref } from 'vue'
+
+const navItems = ['IT SOLUTIONS', 'ABOUT US']
+
+const navLinks = [
+  {
+    category: 'MANAGED IT SERVICES',
+    links: [
+      { name: 'Managed IT Services & Solutions', routeName: 'managed-it-services/managed-it-services-and-solutions' },
+      { name: 'Co-Managed IT Services', routeName: 'managed-it-services/co-managed-it-services' },
+      { name: 'Remote IT Services', routeName: 'managed-it-services/remote-it-services' },
+      { name: 'On-Site Support', routeName: 'managed-it-services/on-site-support' },
+      {
+        name: 'Server and Network Management',
+        routeName: 'managed-it-services/server-and-network-management',
+      },
+      {
+        name: 'Backup & Disaster Recovery (BDR)',
+        routeName: 'managed-it-services/backup-and-disaster-recovery',
+      },
+      { name: 'IT Procurement Services', routeName: 'managed-it-services/it-procurement-services' },
+      {
+        name: 'Employee Onboarding & Offboarding',
+        routeName: 'managed-it-services/employee-onboarding-and-offboarding',
+      },
+    ],
+  },
+  {
+    category: 'IT CONSULTING',
+    links: [
+      { name: 'IT Consulting & Services', routeName: 'it-consulting/it-consulting-and-services' },
+      { name: 'IT Strategy & Planning', routeName: 'it-consulting/it-strategy-and-planning' },
+      { name: 'IT Assessment Services', routeName: 'it-consulting/it-assessment-services' },
+      {
+        name: 'Mergers & Acquisitions Consulting',
+        routeName: 'it-consulting/mergers-and-acquisitions-consulting',
+      },
+      {
+        name: 'Virtual CIO & CTO Services',
+        routeName: 'it-consulting/virtual-cio-and-cto-services',
+      },
+      {
+        name: 'Risk & Compliance Services',
+        routeName: 'it-consulting/risk-and-compliance-services',
+      },
+    ],
+  },
+  {
+    category: 'CLOUD SOLUTIONS',
+    links: [
+      { name: 'Managed Cloud Services', routeName: 'cloud-solutions/managed-cloud-services' },
+      {
+        name: 'Managed Cloud Infrastructure Services',
+        routeName: 'cloud-solutions/managed-cloud-infrastructure-services',
+      },
+      {
+        name: 'Managed Desktop as a Service (Daas)',
+        routeName: 'cloud-solutions/managed-desktop-as-a-service',
+      },
+      {
+        name: 'Data Center Housing & Cloud Data Migration',
+        routeName: 'cloud-solutions/data-center-housing-and-cloud-data-migration',
+      },
+      { name: 'Microsoft 365', routeName: 'cloud-solutions/microsoft-365' },
+      {
+        name: 'Microsoft Teams & Teams Phone',
+        routeName: 'cloud-solutions/microsoft-teams-and-teams-phone',
+      },
+      { name: 'Amazon Web Services (AWS)', routeName: 'cloud-solutions/amazon-web-services' },
+      { name: 'Microsoft OneDrive & SharePoint', routeName: 'cloud-solutions/microsoft-onedrive-and-sharepoint' },
+      { name: 'Google Workspace (Formally G Suite)', routeName: 'cloud-solutions/google-workspace' },
+    ],
+  },
+  {
+    category: 'PRICING',
+    links: [
+      { name: 'IT Service Plans', routeName: 'pricing/it-service-plans' },
+      { name: 'Cybersecurity Plans', routeName: 'pricing/cybersecurity-plans' },
+    ],
+  },
+  {
+    category: 'ABOUT US',
+    links: [
+      { name: 'Leadership', routeName: 'about-us/leadership' },
+      { name: 'Message from CEO', routeName: 'about-us/message-from-ceo' },
+      { name: 'Partners', routeName: 'about-us/partners' },
+      { name: 'Certifications', routeName: 'about-us/certifications' },
+      { name: 'Locations', routeName: 'about-us/locations' },
+    ],
+  },
+]
+
+const toggle = ref(false)
+
+const activeCategory = ref(null)
+</script>
+
 <template>
   <nav
     class="fixed top-0 z-50 bg-white w-full h-auto flex justify-between items-center md:justify-start md:gap-[8vw] py-4 px-4 md:px-8"
@@ -42,98 +143,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import TheLogo from '../atoms/TheLogo.vue'
-import MenuButton from '../atoms/MenuButton.vue'
-import TheButton from '../atoms/TheButton.vue'
-import { ref } from 'vue'
-
-const navItems = ['IT SOLUTIONS', 'ABOUT US']
-
-const navLinks = [
-  {
-    category: 'MANAGED IT SERVICES',
-    links: [
-      { name: 'Managed IT Services', routeName: 'managed-it-services' },
-      { name: 'Co-Managed IT Services', routeName: 'managed-it-services/co-managed-it-services' },
-      { name: 'Remote IT Services', routeName: 'managed-it-services/remote-it-services' },
-      { name: 'On-Site Support', routeName: 'managed-it-services/on-site-support' },
-      {
-        name: 'Server and Network Management',
-        routeName: 'managed-it-services/server-and-network-management',
-      },
-      {
-        name: 'Backup & Disaster Recovery',
-        routeName: 'managed-it-services/backup-disaster-recovery',
-      },
-      { name: 'IT Procurement', routeName: 'managed-it-services/it-procurement' },
-      {
-        name: 'Employee Onboarding & Offboarding',
-        routeName: 'managed-it-services/employee-onboarding-offboarding',
-      },
-      {
-        name: 'IT Staff Augmentation Services',
-        routeName: 'managed-it-services/it-staff-augmentation-services',
-      },
-    ],
-  },
-  {
-    category: 'IT CONSULTING',
-    links: [
-      { name: 'IT Strategy & Planning', routeName: 'it-consulting/it-strategy-planning' },
-      { name: 'IT Assessment Services', routeName: 'it-consulting/it-assessment-services' },
-      {
-        name: 'Mergers & Acquisitions Consulting',
-        routeName: 'it-consulting/mergers-acquisitions-consulting',
-      },
-      { name: 'Virtual CIO & CTO Services', routeName: 'it-consulting/virtual-cio-cto-services' },
-      { name: 'Risk & Compliance Services', routeName: 'it-consulting/risk-compliance-services' },
-    ],
-  },
-  {
-    category: 'CLOUD SOLUTIONS',
-    links: [
-      { name: 'Managed Cloud Services', routeName: 'cloud-solutions/managed-cloud-services' },
-      {
-        name: 'Managed Cloud Infrastructure',
-        routeName: 'cloud-solutions/managed-cloud-infrastructure',
-      },
-      { name: 'Managed Cloud Security', routeName: 'cloud-solutions/managed-cloud-security' },
-      {
-        name: 'Data Center Housing & Cloud & Data Migration',
-        routeName: 'cloud-solutions/data-center-housing-cloud-data-migration',
-      },
-      { name: 'Microsoft 365 Services', routeName: 'cloud-solutions/microsoft-365-services' },
-      {
-        name: 'Microsoft Teams & Teams Phone',
-        routeName: 'cloud-solutions/microsoft-teams-teams-phone',
-      },
-      { name: 'Microsoft Azure', routeName: 'cloud-solutions/microsoft-azure' },
-      { name: 'Google Workspace (GSuite)', routeName: 'cloud-solutions/google-workspace' },
-      { name: 'Amazon AWS', routeName: 'cloud-solutions/amazon-aws' },
-    ],
-  },
-  {
-    category: 'PRICING',
-    links: [
-      { name: 'IT Service Plans', routeName: 'pricing/it-service-plans' },
-      { name: 'Cybersecurity Plans', routeName: 'pricing/cybersecurity-plans' },
-    ],
-  },
-  {
-    category: 'ABOUT US',
-    links: [
-      { name: 'Leadership', routeName: 'about-us/leadership' },
-      { name: 'Message from CEO', routeName: 'about-us/message-from-ceo' },
-      { name: 'Partners', routeName: 'about-us/partners' },
-      { name: 'Certifications', routeName: 'about-us/certifications' },
-      { name: 'Locations', routeName: 'about-us/locations' },
-    ],
-  },
-]
-
-const toggle = ref(false)
-
-const activeCategory = ref(null)
-</script>

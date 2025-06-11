@@ -1,3 +1,11 @@
+<script setup>
+import NavBar from '../organisms/NavBar.vue'
+import BaseHero from '../organisms/BaseHero.vue'
+import BaseMain from '../organisms/BaseMain.vue'
+import TheCTC from '../organisms/TheCTC.vue'
+import TheFooter from '../organisms/TheFooter.vue'
+</script>
+
 <template>
   <slot name="navbar">
     <NavBar />
@@ -17,11 +25,3 @@
     <TheFooter />
   </slot>
 </template>
-
-<script setup>
-import NavBar from '../organisms/NavBar.vue'
-import BaseHero from '../organisms/BaseHero.vue'
-import BaseMain from '../organisms/BaseMain.vue'
-import TheCTC from '../organisms/TheCTC.vue'
-import TheFooter from '../organisms/TheFooter.vue'
-</script>

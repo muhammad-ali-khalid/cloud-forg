@@ -1,3 +1,7 @@
+<script setup>
+import ResponsiveLayout from '../templates/ResponsiveLayout.vue'
+</script>
+
 <template>
   <ResponsiveLayout>
     <template #left>
@@ -24,7 +28,3 @@
     </template>
   </ResponsiveLayout>
 </template>
-
-<script setup>
-import ResponsiveLayout from '../templates/ResponsiveLayout.vue'
-</script>

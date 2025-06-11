@@ -7,11 +7,6 @@
   </div>
 </template>
 
-<script setup>
-import router from '@/router'
-import { Route } from 'lucide-vue-next'
-</script>
-
 <style scoped>
 .parent {
   background-image: url('/hero-img.png');

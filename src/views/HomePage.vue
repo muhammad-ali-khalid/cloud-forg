@@ -1,3 +1,55 @@
+<script setup>
+import BaseLayout from '@/components/templates/BaseLayout.vue'
+import TheButton from '@/components/atoms/TheButton.vue'
+import TheHero from '@/components/organisms/TheHero.vue'
+import TheHexagon from '@/components/molecules/TheHexagon.vue'
+import TheCard from '@/components/molecules/TheCard.vue'
+import TheCarousel from '@/components/molecules/TheCarousel.vue'
+import { CarouselItem } from '@/components/ui/carousel'
+import ResponsiveLayout from '@/components/templates/ResponsiveLayout.vue'
+
+const services = [
+  { name: 'Managed IT Services', routeName: 'managed-it-services' },
+  { name: 'IT Consulting', routeName: 'managed-it-services' },
+  { name: 'Cloud Solutions', routeName: 'managed-it-services' },
+  { name: 'Business Apps & Software Development', routeName: 'managed-it-services' },
+  { name: 'Staff Augmentation', routeName: 'managed-it-services' },
+]
+
+const cards = [
+  {
+    heading: 'Legal',
+    detail:
+      'Robust IT solutions for construction: project management tools, data analytics, cloud services, cybersecurity.',
+  },
+  {
+    heading: 'Construction',
+    detail:
+      'Robust IT solutions for construction: project management tools, data analytics, cloud services, cybersecurity.',
+  },
+  {
+    heading: 'Real Estate',
+    detail:
+      'Robust IT solutions for construction: project management tools, data analytics, cloud services, cybersecurity.',
+  },
+  {
+    heading: 'Healthcare',
+    detail:
+      'Robust IT solutions for construction: project management tools, data analytics, cloud services, cybersecurity.',
+  },
+  {
+    heading: 'Non Profit',
+    detail:
+      'Robust IT solutions for construction: project management tools, data analytics, cloud services, cybersecurity.',
+  },
+  {
+    heading: 'Accounting & Finance',
+    detail:
+      'Robust IT solutions for construction: project management tools, data analytics, cloud services, cybersecurity.',
+  },
+]
+</script>
+
 <template>
   <BaseLayout>
     <template #hero>
@@ -86,55 +138,3 @@
     </template>
   </BaseLayout>
 </template>
-
-<script setup>
-import BaseLayout from '@/components/templates/BaseLayout.vue'
-import TheButton from '@/components/atoms/TheButton.vue'
-import TheHero from '@/components/organisms/TheHero.vue'
-import TheHexagon from '@/components/molecules/TheHexagon.vue'
-import TheCard from '@/components/molecules/TheCard.vue'
-import TheCarousel from '@/components/molecules/TheCarousel.vue'
-import { CarouselItem } from '@/components/ui/carousel'
-import ResponsiveLayout from '@/components/templates/ResponsiveLayout.vue'
-
-const services = [
-  { name: 'Managed IT Services', routeName: 'managed-it-services' },
-  { name: 'IT Consulting', routeName: 'managed-it-services' },
-  { name: 'Cloud Solutions', routeName: 'managed-it-services' },
-  { name: 'Business Apps & Software Development', routeName: 'managed-it-services' },
-  { name: 'Staff Augmentation', routeName: 'managed-it-services/it-staff-augmentation-services' },
-]
-
-const cards = [
-  {
-    heading: 'Legal',
-    detail:
-      'Robust IT solutions for construction: project management tools, data analytics, cloud services, cybersecurity.',
-  },
-  {
-    heading: 'Construction',
-    detail:
-      'Robust IT solutions for construction: project management tools, data analytics, cloud services, cybersecurity.',
-  },
-  {
-    heading: 'Real Estate',
-    detail:
-      'Robust IT solutions for construction: project management tools, data analytics, cloud services, cybersecurity.',
-  },
-  {
-    heading: 'Healthcare',
-    detail:
-      'Robust IT solutions for construction: project management tools, data analytics, cloud services, cybersecurity.',
-  },
-  {
-    heading: 'Non Profit',
-    detail:
-      'Robust IT solutions for construction: project management tools, data analytics, cloud services, cybersecurity.',
-  },
-  {
-    heading: 'Accounting & Finance',
-    detail:
-      'Robust IT solutions for construction: project management tools, data analytics, cloud services, cybersecurity.',
-  },
-]
-</script>
