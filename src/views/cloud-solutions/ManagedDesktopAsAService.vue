@@ -17,8 +17,4 @@ import BaseLayout from '@/components/templates/BaseLayout.vue'
   </BaseLayout>
 </template>
 
-<style scoped>
-.managed-desktop-as-a-service {
-  /* Add your styles here */
-}
-</style>
+

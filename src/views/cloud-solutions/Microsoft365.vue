@@ -16,9 +16,3 @@ import BaseLayout from '@/components/templates/BaseLayout.vue'
     </template>
   </BaseLayout>
 </template>
-
-<style scoped>
-.microsoft-365 {
-  /* Add your styles here */
-}
-</style>

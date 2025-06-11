@@ -16,9 +16,3 @@ import BaseLayout from '@/components/templates/BaseLayout.vue'
     </template>
   </BaseLayout>
 </template>
-
-<style scoped>
-.risk-and-compliance-services {
-  /* Add your styles here */
-}
-</style>

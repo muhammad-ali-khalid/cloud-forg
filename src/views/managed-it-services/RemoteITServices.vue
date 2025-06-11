@@ -11,9 +11,3 @@ import BaseLayout from '@/components/templates/BaseLayout.vue'
     </div>
   </BaseLayout>
 </template>
-
-<style scoped>
-.remote-it-services {
-  /* Add your styles here */
-}
-</style>

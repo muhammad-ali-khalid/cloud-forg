@@ -17,8 +17,3 @@ import BaseLayout from '@/components/templates/BaseLayout.vue'
   </BaseLayout>
 </template>
 
-<style scoped>
-.it-strategy-and-planning {
-  /* Add your styles here */
-}
-</style>

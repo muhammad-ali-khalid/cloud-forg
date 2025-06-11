@@ -17,8 +17,3 @@ import BaseLayout from '@/components/templates/BaseLayout.vue'
   </BaseLayout>
 </template>
 
-<style scoped>
-.it-assessment-services {
-  /* Add your styles here */
-}
-</style>

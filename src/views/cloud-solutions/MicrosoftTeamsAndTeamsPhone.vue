@@ -16,9 +16,3 @@ import BaseLayout from '@/components/templates/BaseLayout.vue'
     </template>
   </BaseLayout>
 </template>
-
-<style scoped>
-.microsoft-teams-and-teams-phone {
-  /* Add your styles here */
-}
-</style>

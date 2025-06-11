@@ -17,8 +17,4 @@ import BaseLayout from '@/components/templates/BaseLayout.vue'
   </BaseLayout>
 </template>
 
-<style scoped>
-.virtual-cio-and-cto-services {
-  /* Add your styles here */
-}
-</style>
+

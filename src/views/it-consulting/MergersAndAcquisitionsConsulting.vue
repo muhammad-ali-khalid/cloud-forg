@@ -17,8 +17,4 @@ import BaseLayout from '@/components/templates/BaseLayout.vue'
   </BaseLayout>
 </template>
 
-<style scoped>
-.mergers-and-acquisitions-consulting {
-  /* Add your styles here */
-}
-</style>
+
