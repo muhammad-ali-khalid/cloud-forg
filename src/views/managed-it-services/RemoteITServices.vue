@@ -6,5 +6,12 @@ import BaseMain from '@/components/organisms/BaseMain.vue'
 </script>
 
 <template>
-  <BaseLayout> </BaseLayout>
+  <BaseLayout>
+    <template #hero>
+      <BaseHero />
+    </template>
+    <template #main>
+      <BaseMain />
+    </template>
+  </BaseLayout>
 </template>

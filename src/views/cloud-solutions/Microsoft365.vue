@@ -8,13 +8,10 @@ import BaseMain from '@/components/organisms/BaseMain.vue'
 <template>
   <BaseLayout>
     <template #hero>
-      <!-- Hero section content -->
+      <BaseHero />
     </template>
     <template #main>
-      <div class="microsoft-365">
-        <h1>Microsoft 365: The Modern Cloud Productivity Platform</h1>
-        <!-- Add your content here -->
-      </div>
+      <BaseMain />
     </template>
   </BaseLayout>
 </template>

@@ -7,9 +7,11 @@ import BaseMain from '@/components/organisms/BaseMain.vue'
 
 <template>
   <BaseLayout>
-    <div class="server-and-network-management">
-      <h1>Server and Network Management</h1>
-      <!-- Add your content here -->
-    </div>
+    <template #hero>
+      <BaseHero />
+    </template>
+    <template #main>
+      <BaseMain />
+    </template>
   </BaseLayout>
 </template>

@@ -7,9 +7,11 @@ import BaseMain from '@/components/organisms/BaseMain.vue'
 
 <template>
   <BaseLayout>
-    <div class="backup-and-disaster-recovery">
-      <h1>Backup & Disaster Recovery (BDR)</h1>
-      <!-- Add your content here -->
-    </div>
+    <template #hero>
+      <BaseHero />
+    </template>
+    <template #main>
+      <BaseMain />
+    </template>
   </BaseLayout>
 </template>

@@ -8,13 +8,10 @@ import BaseMain from '@/components/organisms/BaseMain.vue'
 <template>
   <BaseLayout>
     <template #hero>
-      <!-- Hero section content -->
+      <BaseHero />
     </template>
     <template #main>
-      <div class="mergers-and-acquisitions-consulting">
-        <h1>Mergers & Acquisitions Consulting</h1>
-        <!-- Add your content here -->
-      </div>
+      <BaseMain />
     </template>
   </BaseLayout>
 </template>

@@ -8,13 +8,10 @@ import BaseMain from '@/components/organisms/BaseMain.vue'
 <template>
   <BaseLayout>
     <template #hero>
-      <!-- Hero section content -->
+      <BaseHero />
     </template>
     <template #main>
-      <div class="virtual-cio-and-cto-services">
-        <h1>Virtual CIO & CTO Services</h1>
-        <!-- Add your content here -->
-      </div>
+      <BaseMain />
     </template>
   </BaseLayout>
 </template>

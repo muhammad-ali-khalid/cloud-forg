@@ -7,9 +7,11 @@ import BaseMain from '@/components/organisms/BaseMain.vue'
 
 <template>
   <BaseLayout>
-    <div class="on-site-it-support">
-      <h1>On-Site IT Support</h1>
-      <!-- Add your content here -->
-    </div>
+    <template #hero>
+      <BaseHero />
+    </template>
+    <template #main>
+      <BaseMain />
+    </template>
   </BaseLayout>
 </template>

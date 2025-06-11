@@ -7,9 +7,11 @@ import BaseMain from '@/components/organisms/BaseMain.vue'
 
 <template>
   <BaseLayout>
-    <div class="google-workspace">
-      <h1>Google Workspace (Formerly G Suite)</h1>
-      <!-- Add your content here -->
-    </div>
+    <template #hero>
+      <BaseHero />
+    </template>
+    <template #main>
+      <BaseMain />
+    </template>
   </BaseLayout>
 </template>
