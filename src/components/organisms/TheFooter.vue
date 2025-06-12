@@ -5,11 +5,7 @@ import TheButton from '../atoms/TheButton.vue'
 const footerLinks = [
   {
     heading: 'SERVICES & CAPABILITIES',
-    links: [
-      'Managed IT Services',
-      'IT Consulting',
-      'Cloud Solutions',
-    ],
+    links: ['Managed IT Services', 'IT Consulting', 'Cloud Solutions'],
   },
   {
     heading: 'COMPANY',
@@ -18,9 +14,8 @@ const footerLinks = [
 ]
 </script>
 
-
 <template>
-  <footer class="w-full h-full">
+  <footer class="w-full h-full" id="footer">
     <div class="w-full h-auto bg-[#E3E3E3] px-4 py-10">
       <div class="flex flex-col gap-4 md:flex-row md:justify-around">
         <div
