@@ -93,7 +93,7 @@ const activeCategory = ref(null)
 
 <template>
   <nav
-    class="fixed top-0 z-50 bg-white w-full h-auto flex justify-between items-center md:justify-start md:gap-[8vw] py-4 px-4 md:px-8"
+    class="fixed top-0 z-50 bg-white w-full h-auto flex justify-between items-center md:justify-start md:gap-[8vw] py-4 px-6 md:px-15"
   >
     <RouterLink :to="{ name: 'home' }"><TheLogo /></RouterLink>
     <button

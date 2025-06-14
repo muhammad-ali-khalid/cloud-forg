@@ -64,11 +64,11 @@ behind-the-scenes infrastructure so your team can stay focused and efficient.`,
     <template #main>
       <BaseMain :table-of-contents="pageContent.tableOfContents">
         <template #intro>
-          <div class="px-8 py-4">
-            <div class="text-[#000000BF] text-3xl font-bold mb-4">
+          <div class="px-6 md:px-15 pt-10">
+            <div class="text-[#000000BF] text-3xl font-black mb-4">
               Dependable. Scalable. Strategic.
             </div>
-            <div class="text-lg">
+            <div class="text-md md:text-lg lg:text-xl">
               At CloudForg, we provide customized Managed IT Services designed specifically for
               small and mid-sized businesses. Whether you need daily tech support or complete
               infrastructure oversight, our mission is to ensure your systems run smoothly—so you
@@ -78,7 +78,7 @@ behind-the-scenes infrastructure so your team can stay focused and efficient.`,
         </template>
         <template #page-content>
           <div>
-            <div id="1our-core-services" class="text-[#000000BF] text-3xl font-bold text-center">
+            <div id="1our-core-services" class="text-[#000000BF] text-3xl font-black text-center pt-10">
               Our Core Services
             </div>
             <div class="w-full flex justify-center">

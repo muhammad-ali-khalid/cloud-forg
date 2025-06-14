@@ -16,15 +16,15 @@ function toggle(index) {
 </script>
 
 <template>
-  <div class="w-full flex flex-col gap-4 m-4 md:w-4/5">
+  <div class="w-full flex flex-col gap-4 m-6 md:w-4/5">
     <div v-for="(item, index) in items" :key="index">
       <div @click="toggle(index)" class="bg-[#EAEAEA] p-3 hover:cursor-pointer flex gap-2">
         <span>
           {{ activeIndex === index ? '⌄' : '>' }}
         </span>
-        <span class="text-xl font-medium">{{ item.heading }}</span>
+        <span class="text-md md:text-lg font-medium">{{ item.heading }}</span>
       </div>
-      <div v-if="activeIndex === index" class="bg-[#F3FAFF] text-lg text-black p-3">
+      <div v-if="activeIndex === index" class="bg-[#F3FAFF] text-md md:text-lg text-black p-3">
         <p>{{ item.content }}</p>
       </div>
     </div>

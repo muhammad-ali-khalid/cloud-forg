@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="bg-blue-900 px-4 py-10 sm:px-8 md:px-16 lg:px-24">
+  <div class="bg-blue-900 px-6 py-10 md:px-16 lg:px-24">
     <form class="max-w-4xl mx-auto flex flex-col gap-6">
       <div class="text-white text-3xl font-black">
         Take the next step towards optimized IT management

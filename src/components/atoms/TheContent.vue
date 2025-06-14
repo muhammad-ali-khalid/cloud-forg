@@ -9,7 +9,7 @@ const props = defineProps({
     <div class="bg-[#EAEAEA] h-auto p-3">
       <a
         :href="contents.href"
-        class="text-black text-xl hover:cursor-pointer hover:text-orange-600"
+        class="text-black text-md md:text-lg lg:text-xl hover:cursor-pointer hover:text-orange-600"
       >
         {{ contents.index + '. ' + contents.content }}
       </a>
