@@ -10,12 +10,11 @@ const props = defineProps({
 <template>
   <ResponsiveLayout>
     <template #left>
-      <div class="px-8 py-4">
-        <TableOfContents :tableOfContents="props.tableOfContents" />
-      </div>
+      <TableOfContents :tableOfContents="props.tableOfContents" />
     </template>
     <template #right>
       <slot name="intro"> </slot>
     </template>
   </ResponsiveLayout>
+  <slot name="page-content"></slot>
 </template>

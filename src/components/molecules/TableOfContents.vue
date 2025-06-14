@@ -7,7 +7,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="w-full h-full">
+  <div class="w-full h-full px-8 py-4">
     <div class="text-3xl text-[#000000BF] font-bold mb-2">Table of contents</div>
     <div class="flex flex-col gap-5">
       <div class="w-full h-auto" v-for="(content, index) in props.tableOfContents" :key="index">
