@@ -1,15 +1,17 @@
 <script setup>
 const props = defineProps({
-  index: Number,
-  content: String,
+  contents: Object,
 })
 </script>
 
 <template>
-  <div>
-    <div class="w-full bg-[#EAEAEA]">
-      <a href="#" class="w-full text-black text-xl py-2 px-2 hover:cursor-pointer hover:text-orange-600">
-        {{ props.index + '. ' + props.content }}
+  <div class="w-full">
+    <div class="bg-[#EAEAEA] h-[50px] p-2">
+      <a
+        :href="contents.href"
+        class="text-black text-xl hover:cursor-pointer hover:text-orange-600"
+      >
+        {{ contents.index + '. ' + contents.content }}
       </a>
     </div>
   </div>

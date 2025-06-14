@@ -3,17 +3,19 @@ import ResponsiveLayout from '../templates/ResponsiveLayout.vue'
 import TableOfContents from '../molecules/TableOfContents.vue'
 
 const props = defineProps({
-  contents: Array,
+  tableOfContents: Array,
 })
 </script>
 
 <template>
   <ResponsiveLayout>
     <template #left>
-      <TableOfContents :contents="contents" />
+      <div class="px-8 py-4">
+        <TableOfContents :tableOfContents="props.tableOfContents" />
+      </div>
     </template>
     <template #right>
-      <h1>right</h1>
+      <slot name="intro"> </slot>
     </template>
   </ResponsiveLayout>
 </template>
